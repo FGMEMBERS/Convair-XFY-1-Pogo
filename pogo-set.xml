@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="pogo-yasim-cnf.xml">
+
+  <sim>
+    <description>Convair XFY 1 Pogo</description>
+    <author>BARANGER Emmanuel (3D) / JUSTUS Maik (FDM)</author>
+  </sim>
+
+</PropertyList>
+
