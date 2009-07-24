@@ -30,7 +30,7 @@
 
   <!-- Pilote -->
   <model>
-    <path>Aircraft/Alphajet/Models/Pilot/pilot.xml</path>
+    <path>Aircraft/Convair-XFY-1-Pogo/Models/Pilot/pilot.xml</path>
     <offsets>
       <x-m> -0.988 </x-m>
       <y-m>  0.000 </y-m>
