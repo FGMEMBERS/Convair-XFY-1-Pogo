@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- Blades -->
+  <model>
+    <name>Blade1-2</name>
+    <path>Aircraft/Convair-XFY-1-Pogo/Models/propeller/blade1-2.xml</path>
+    <offsets>
+      <x-m> 0.130 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Blade2-2</name>
+    <path>Aircraft/Convair-XFY-1-Pogo/Models/propeller/blade2-2.xml</path>
+    <offsets>
+      <x-m> 0.130 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>  120.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Blade3-2</name>
+    <path>Aircraft/Convair-XFY-1-Pogo/Models/propeller/blade3-2.xml</path>
+    <offsets>
+      <x-m> 0.130 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>  240.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
+

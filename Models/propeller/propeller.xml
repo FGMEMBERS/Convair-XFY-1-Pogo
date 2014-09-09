@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>propeller.ac</path>
+
+  <animation>
+    <object-name>nez</object-name>
+    <object-name>bol1</object-name>
+    <object-name>bol2</object-name>
+  </animation>
+
+  <!-- First propeller -->
+  <model>
+    <name>Propeller1</name>
+    <path>Aircraft/Convair-XFY-1-Pogo/Models/propeller/propeller1.xml</path>
+  </model>
+
+  <!-- Rotation du bol -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Propeller1</object-name>
+    <object-name>bol2</object-name>
+    <property>rotors/main/blade[0]/position-deg</property>
+    <center>
+       <x-m> 0.000 </x-m>
+       <y-m> 0.000 </y-m>
+       <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <!-- Second propeller -->
+  <model>
+    <name>Propeller2</name>
+    <path>Aircraft/Convair-XFY-1-Pogo/Models/propeller/propeller2.xml</path>
+  </model>
+
+  <!-- Rotation du bol -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Propeller2</object-name>
+    <object-name>bol1</object-name>
+    <property>rotors/main/blade[1]/position-deg</property>
+    <center>
+       <x-m> 0.000 </x-m>
+       <y-m> 0.000 </y-m>
+       <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x> -1.000 </x>
+      <y>  0.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

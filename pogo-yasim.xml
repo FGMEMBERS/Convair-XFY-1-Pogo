@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<airplane mass="16865">
+
+  <approach speed="58" aoa="13">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.5"/>
+    <control-setting axis="/controls/flight/flaps" value="1.0"/>
+    <control-setting axis="/controls/gear/gear-down" value="1"/>
+  </approach>
+
+  <cruise speed="180" alt="23200">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/boost" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/boost" value="1.0"/>
+    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/controls/gear/gear-down" value="0"/>
+  </cruise>
+
+  <cockpit z="-0.139" y="0" x="-0.58"/>
+
+  <fuselage ax="4.397" ay="0" az="0.06" bx="-4.338" by="0" bz="0.399" width="1.049" taper="0.5" midpoint="0.25"/>
+
+  <!-- main == lower rotor (name=main for mp-protocol)-->
+  <!-- tail == upper rotor (name=tail for mp-protocol)-->
+
+  <rotor name="main"
+         x="3.987" y="0.000" z="-0.020"
+         nx="1.0" ny="0" nz="0.0"
+         fx="0" fy="0" fz="1"
+         ccw="1"
+         mincollective="-180" maxcollective="180"
+         mincyclicele="-90" maxcyclicele="90"
+         mincyclicail="-90" maxcyclicail="90"
+         diameter="4.8" 
+         numblades="3" 
+         weightperblade="50"
+         twist="-27.5"
+         chord="0.3"
+         rpm="3200"
+         relbladecenter="0.5"
+         dynamic="1"
+         rellenflaphinge="0.13"
+         delta3="-0.26" delta=".25"
+         pitch-a="10" pitch-b="15"
+         flapmin="-15" flapmax="15" flap0="-2" flap0factor="0"
+         notorque="0"
+         dragfactor="0.30"
+         translift-ve="20" translift-maxfactor="1.3"
+         ground-effect-constant="0.1"
+         taper="1"
+         number-of-segments="8"
+         number-of-parts="8"
+         rel-len-where-incidence-is-measured="0.6" rel-len-blade-start="0.16"
+         airfoil-lift-coefficient="3.15" airfoil-drag-coefficient0="0.38" airfoil-drag-coefficient1="5.5"
+         incidence-stall-zero-speed="95" incidence-stall-half-sonic-speed="85.0"
+         lift-factor-stall="0.45"
+         stall-change-over="11"
+         drag-factor-stall="4.0"
+         cyclic-factor="0.8"
+         rotor-correction-factor="3.7"
+         balance="1"
+         downwashfactor="0.3"
+         phi0="95">
+    <control-input axis="/controls/flight/elevator" control="CYCLICELE" src0="-1.0" src1="1.0" dst0=".3" dst1="-.3"/>
+    <control-input axis="/controls/flight/aileron" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="0.02" dst1="-0.02"/>
+    <control-input axis="/controls/flight/rudder" control="CYCLICAIL" src0="-1.0" src1="1.0" dst0=".3" dst1="-.3"/>
+    <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="0.0" src1="1.0" dst0="-0.01" dst1="0.12"/>
+    <control-input axis="/velocities/airspeed-kt" control="COLLECTIVE" src0="0.0" src1="300" dst0="0.0" dst1="0.15"/>
+  </rotor>
+
+  <rotor name="tail"
+         x="4.487" y="0.000" z="-0.020"
+         nx="1.0" ny="0" nz="0.0"
+         fx="0" fy="0" fz="1"
+         ccw="0"
+         mincollective="-180" maxcollective="180"
+         mincyclicele="-90" maxcyclicele="90"
+         mincyclicail="-90" maxcyclicail="90"
+         diameter="4.8"
+         numblades="3"
+         weightperblade="50"
+         twist="-27.5"
+         chord="0.3"
+         rpm="3200"
+         relbladecenter="0.5"
+         dynamic="1"
+         rellenflaphinge="0.13"
+         delta3="-0.26" delta=".25"
+         pitch-a="10" pitch-b="15"
+         flapmin="-15" flapmax="15" flap0="-2" flap0factor="0"
+         notorque="0"
+         dragfactor="0.30"
+         translift-ve="20" translift-maxfactor="1.3"
+         ground-effect-constant="0.1"
+         taper="1"
+         number-of-segments="8"
+         number-of-parts="8"
+         rel-len-where-incidence-is-measured="0.6" rel-len-blade-start="0.16"
+         airfoil-lift-coefficient="3.15" airfoil-drag-coefficient0="0.38" airfoil-drag-coefficient1="5.5"
+         incidence-stall-zero-speed="95" incidence-stall-half-sonic-speed="85.0"
+         lift-factor-stall="0.45"
+         stall-change-over="11"
+         drag-factor-stall="4.0"
+         cyclic-factor="0.8"
+         rotor-correction-factor="3.7"
+         balance="1"
+         downwashfactor="0.3"
+         phi0="95">
+    <control-input axis="/controls/flight/elevator" control="CYCLICELE" src0="-1.0" src1="1.0" dst0=".3" dst1="-.3"/>
+    <control-input axis="/controls/flight/rudder" control="CYCLICAIL" src0="-1.0" src1="1.0" dst0=".3" dst1="-.3"/>
+    <control-input axis="/controls/flight/aileron" control="COLLECTIVE" src0="-1.0" src1="1.0" dst0="-0.02" dst1="0.02"/>
+    <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE" src0="0.0" src1="1.0" dst0="-0.01" dst1="0.12"/>
+    <control-input axis="/velocities/airspeed-kt" control="COLLECTIVE" src0="0.0" src1="300" dst0="0.0" dst1="0.15"/>
+  </rotor>
+
+  <rotorgear max-power-engine="4362000"
+             max-power-rotor-brake="100"
+             rotorgear-friction="1.4"
+             engine-prop-factor="0.005"
+             engine-accel-limit="40"
+             yasimdragfactor="112.3"
+             yasimliftfactor="40.115">
+    <control-input axis="/controls/engines/engine[0]/magnetos" control="ROTORGEARENGINEON"/>
+    <control-input axis="/velocities/airspeed-kt" control="ROTORRELTARGET" src0="200.0" src1="450.0" dst0="0.5" dst1="0.75"/>
+  </rotorgear>
+
+  <mstab x="1.424" y="0.438" z="-0.227" 
+         length="4.2" 
+         camber="0.1"
+         chord="2.77" 
+         taper=".286" 
+         sweep="19" 
+         dihedral="4" 
+         twist="-3">
+         <stall aoa="14" width="6" peak="1.5"/>
+         <flap1 start="0.38" end="0.97" lift="1.15" drag="1.12"/>
+      
+         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+         <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+      
+         <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+         <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+  </mstab>
+
+  <mstab x="-3.147" y="0.138" z="0.394" 
+         incidence ="1.2"
+         ii="-3" 
+         length="1.637" 
+         effectiveness="2.2"
+         chord="2.5" 
+         taper=".545" 
+         sweep="15" >
+         <stall aoa="18" width="3" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.15" drag="1.12"/>
+       
+         <control-input axis="/controls/flight/elevator" control="FLAP0" effectiveness="0.3"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+         <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
+         <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
+       
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </mstab>
+
+  <vstab x="-3.160" y="0" z="0.418" 
+         length="1.110" 
+         effectiveness="2.25"
+         chord="3.45" 
+         taper=".462" 
+         sweep="2">
+         <stall aoa="14" width="3" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.15" drag="1.12"/>
+       
+         <control-input axis="/controls/flight/rudder" control="FLAP0" effectiveness="2.0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+       
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+  </vstab>
+
+  <!-- only for solver 
+  <thruster x="3.987" y="0.000" z="-0.020"
+            vx="1" vy="0" vz="0"
+            thrust="10000">
+            <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+  </thruster>
+  -->
+
+  <gear x="-4.941" y="-3.896" z="-0.002"
+        upx="1" upy="0" upz="0" 
+        compression="1.3" 
+        retract-time="7" 
+        spring="15" 
+        damp="10">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+      
+        <control-speed control="EXTEND" transition-time="7"/>
+      
+        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+  </gear>
+
+  <gear x="-4.941" y="0.037" z="3.236" 
+        upx="1" upy="0" upz="0" 
+        compression="1.3" 
+        retract-time="7" 
+        spring="15" 
+        damp="10">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+     
+        <control-speed control="EXTEND" transition-time="7"/>
+      
+        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+  </gear>
+
+  <gear x="-4.941" y="3.844" z="-0.002" 
+        upx="1" upy="0" upz="0" 
+        compression="1.3" 
+        retract-time="7" 
+        spring="15" 
+        damp="10">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+      
+        <control-speed control="EXTEND" transition-time="7"/>
+      
+        <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+  </gear>
+
+  <gear x="-4.941" y="0.037" z="-3.164" 
+        upx="1" upy="0" upz="0" 
+        compression="1.3" 
+        retract-time="7" 
+        spring="15" 
+        damp="10">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+      
+        <control-speed control="EXTEND" transition-time="7"/>
+      
+        <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
+  </gear>
+
+
+  <!-- some additional gears, only for erection at startup-->
+  <gear x="-5" y="5" z="-8" 
+        compression="1.3" 
+        retract-time="1" 
+        spring="14" 
+        damp="10"
+        ignored-by-solver="1">
+        <control-input axis="/sim/model/pogo/erection-gear" control="EXTEND"/>
+  </gear>
+
+  <gear x="-5" y="-5" z="-8" 
+        compression="1.3" 
+        retract-time="1" 
+        spring="14" 
+        damp="10"
+        ignored-by-solver="1">
+        <control-input axis="/sim/model/pogo/erection-gear" control="EXTEND"/>
+  </gear>
+
+  <gear x="-5" y="5" z="8" 
+        compression="1.3" 
+        retract-time="1" 
+        spring="14" 
+        damp="10"
+        ignored-by-solver="1">
+        <control-input axis="/sim/model/pogo/erection-gear" control="EXTEND"/>
+  </gear>
+
+  <gear x="-5" y="-5" z="8" 
+        compression="1.3" 
+        retract-time="1" 
+        spring="14" 
+        damp="10"
+        ignored-by-solver="1">
+        <control-input axis="/sim/model/pogo/erection-gear" control="EXTEND"/>
+  </gear>
+
+  <gear x="5" y="0" z="-13.5" 
+        compression="0.3" 
+        retract-time="1" 
+        spring="1" 
+        damp="10"
+        ignored-by-solver="1">
+        <control-input axis="/sim/model/pogo/erection-gear" control="EXTEND"/>
+  </gear>
+	
+  <gear x="-5" y="-5" z="0" 
+        upx="1" upy="0" upz="0" 
+        compression="1.3" 
+        retract-time="1" 
+        spring="14" 
+        damp="10"
+        ignored-by-solver="1">
+        <control-input axis="/sim/model/pogo/erection-gear" control="EXTEND"/>
+  </gear>
+
+  <gear x="-5" y="5" z="0" 
+        upx="1" upy="0" upz="0" 
+        compression="1.3" 
+        retract-time="1" 
+        spring="14" 
+        damp="10"
+        ignored-by-solver="1">
+        <control-input axis="/sim/model/pogo/erection-gear" control="EXTEND"/>
+  </gear>
+
+  <gear x="-5" y="" z="-5" 
+        upx="1" upy="0" upz="0" 
+        compression="1.3" 
+        retract-time="1" 
+        spring="14" 
+        damp="10"
+        ignored-by-solver="1">
+        <control-input axis="/sim/model/pogo/erection-gear" control="EXTEND"/>
+  </gear>
+
+  <gear x="-5" y="0" z="15" 
+        upx="1" upy="0" upz="0" 
+       compression="1.3" 
+       retract-time="1" 
+       spring="14" 
+       damp="10"
+       ignored-by-solver="1">
+       <control-input axis="/sim/model/pogo/erection-gear" control="EXTEND"/>
+  </gear>
+	
+  <tank x="-0.2" y="0.0" z="0.0" capacity="1000"/>
+
+  <ballast x="2.0" y="0.0" z="-1.5" mass="3500"/>
+
+</airplane>

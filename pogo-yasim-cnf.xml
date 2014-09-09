@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="pogo-base.xml">
+
+  <sim>
+
+    <description>Convair XFY 1 Pogo (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>pogo-yasim</aero>
+
+  </sim>
+
+</PropertyList>
+
+

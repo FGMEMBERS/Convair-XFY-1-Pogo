@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>pogo.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Convair-XFY-1-Pogo/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fuselage</object-name>
+    <object-name>ailesV</object-name>
+    <object-name>ailesH</object-name>
+    <object-name>directionB</object-name>
+    <object-name>directionH</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>axe0</object-name>
+    <object-name>axe1</object-name>
+    <object-name>axe2</object-name>
+    <object-name>axe3</object-name>
+    <object-name>roue0</object-name>
+    <object-name>roue1</object-name>
+    <object-name>roue2</object-name>
+    <object-name>roue3</object-name>
+    <object-name>tourverriere</object-name>
+    <object-name>trous</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>vitres</object-name>
+    <object-name>verriere</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitres</object-name>
+    <object-name>verriere</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
+    <object-name>vitres</object-name>
+    <object-name>verriere</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>ailesV</object-name>
+    <object-name>ailesH</object-name>
+    <object-name>directionB</object-name>
+    <object-name>directionH</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>axe0</object-name>
+    <object-name>axe1</object-name>
+    <object-name>axe2</object-name>
+    <object-name>axe3</object-name>
+    <object-name>roue0</object-name>
+    <object-name>roue1</object-name>
+    <object-name>roue2</object-name>
+    <object-name>roue3</object-name>
+    <object-name>tourverriere</object-name>
+    <object-name>trous</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
+
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+<!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+-->
+  </animation>
+
+  <!-- Interieur -->
+  <model>
+    <path>Aircraft/Convair-XFY-1-Pogo/Models/Interior/interior.xml</path>
+    <offsets>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>   0.0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Rotor principale -->
+  <model>
+    <path>Aircraft/Convair-XFY-1-Pogo/Models/propeller/propeller.xml</path>
+    <offsets>
+      <x-m> -4.152 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.020 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Gouverne de profondeur -->
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronG</object-name>
+    <property>/controls/flight/elevator</property>
+    <factor>-15.0</factor>
+    <axis>
+      <x1-m>  3.158 </x1-m>
+      <y1-m> -0.694 </y1-m>
+      <z1-m> -0.019 </z1-m>
+      <x2-m>  3.651 </x2-m>
+      <y2-m> -3.649 </y2-m>
+      <z2-m> -0.029 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronD</object-name>
+    <property>/controls/flight/elevator</property>
+    <factor>-15.0</factor>
+    <axis>
+      <x1-m>  3.651 </x1-m>
+      <y1-m>  3.649 </y1-m>
+      <z1-m> -0.029 </z1-m>
+      <x2-m>  3.158 </x2-m>
+      <y2-m>  0.694 </y2-m>
+      <z2-m> -0.019 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>directionB</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>20</factor>
+    <axis>
+      <x1-m>  3.721 </x1-m>
+      <y1-m>  0.000 </y1-m>
+      <z1-m> -2.318 </z1-m>
+      <x2-m>  3.599 </x2-m>
+      <y2-m>  0.000 </y2-m>
+      <z2-m> -0.739 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>directionH</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>20</factor>
+    <axis>
+      <x1-m>  3.570 </x1-m>
+      <y1-m>  0.000 </y1-m>
+      <z1-m>  0.455 </z1-m>
+      <x2-m>  3.777 </x2-m>
+      <y2-m>  0.000 </y2-m>
+      <z2-m>  2.322 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Animations des ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronG</object-name>
+    <property>/surface-positions/left-aileron-pos-norm</property>
+    <factor>-15.0</factor>
+    <axis>
+      <x1-m>  3.158 </x1-m>
+      <y1-m> -0.694 </y1-m>
+      <z1-m> -0.019 </z1-m>
+      <x2-m>  3.651 </x2-m>
+      <y2-m> -3.649 </y2-m>
+      <z2-m> -0.029 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronD</object-name>
+    <property>/surface-positions/right-aileron-pos-norm</property>
+    <factor>-15.0</factor>
+    <axis>
+      <x1-m>  3.651 </x1-m>
+      <y1-m>  3.649 </y1-m>
+      <z1-m> -0.029 </z1-m>
+      <x2-m>  3.158 </x2-m>
+      <y2-m>  0.694 </y2-m>
+      <z2-m> -0.019 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Compression -->
+  <animation>
+    <type>translate</type>
+    <object-name>axe0</object-name>
+    <object-name>roue0</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep> 0.0 </dep>
+      </entry>
+      <entry>
+        <ind> 1.000 </ind>
+        <dep> 0.300 </dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>axe1</object-name>
+    <object-name>roue1</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep> 0.0 </dep>
+      </entry>
+      <entry>
+        <ind> 1.000 </ind>
+        <dep> 0.300 </dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>axe2</object-name>
+    <object-name>roue2</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep> 0.0 </dep>
+      </entry>
+      <entry>
+        <ind> 1.000 </ind>
+        <dep> 0.300 </dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>axe3</object-name>
+    <object-name>roue3</object-name>
+    <property>gear/gear[3]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep> 0.0 </dep>
+      </entry>
+      <entry>
+        <ind> 1.000 </ind>
+        <dep> 0.300 </dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <!-- Rotation des roues lors du roulage -->
+  <animation>
+    <type>spin</type>
+    <object-name>roue0</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m>  4.941 </x-m>
+      <y-m> -3.896 </y-m>
+      <z-m> -0.002 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y>  0.000 </y>
+      <z> -1.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roue1</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m>  4.941 </x-m>
+      <y-m> -0.037 </y-m>
+      <z-m>  3.236 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y> -1.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roue2</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m>  4.941 </x-m>
+      <y-m>  3.844 </y-m>
+      <z-m> -0.002 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y>  0.000 </y>
+      <z> -1.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roue3</object-name>
+    <property>gear/gear[3]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m>  4.941 </x-m>
+      <y-m> -0.037 </y-m>
+      <z-m> -3.164 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y> -1.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+  <!-- Canopy -->
+  <animation>
+    <type>translate</type>
+    <object-name>tourverriere</object-name>
+    <object-name>verriere</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 0.00 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind> 0.05 </ind>
+        <dep> 0.10 </dep>
+      </entry>
+      <entry>
+        <ind> 1.00 </ind>
+        <dep> 0.10 </dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x> 0.000 </x>
+      <y> 0.000 </y>
+      <z> 1.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>tourverriere</object-name>
+    <object-name>verriere</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 0.00 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind> 0.05 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind>  1.00 </ind>
+        <dep> 20.00 </dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m> -0.680 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.680 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 1.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
