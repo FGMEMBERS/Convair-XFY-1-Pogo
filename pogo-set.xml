@@ -5,6 +5,26 @@
   <sim>
     <description>Convair XFY 1 Pogo</description>
     <author>BARANGER Emmanuel (3D) / JUSTUS Maik (FDM)</author>
+
+
+    <rating>
+      <FDM type="int">     1 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 0 </cockpit>
+      <model type="int">   2 </model>
+    </rating>
+
+    <tags>
+      <tag>1950s</tag>
+      <tag>fighter</tag>
+      <tag>experimental</tag>
+      <tag>turboprop</tag>
+      <tag>single-engine</tag>
+      <tag>propeller</tag>
+      <tag>vtol</tag>
+    </tags>
+
+
   </sim>
 
 </PropertyList>
